@@ -504,6 +504,8 @@ body::after {
 .project-card:nth-child(2) { grid-column: 7 / 13; }
 .project-card:nth-child(3) { grid-column: 1 / 5; }
 .project-card:nth-child(4) { grid-column: 5 / 13; }
+.project-card:nth-child(5) { grid-column: 1 / 7; }
+.project-card:nth-child(6) { grid-column: 7 / 13; }
 
 .project-card:hover {
   transform: translateY(-7px);
