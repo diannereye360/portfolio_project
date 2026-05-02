@@ -1224,6 +1224,134 @@ body::after {
   text-shadow: 0 0 12px rgba(212, 184, 240, 0.4);
 }
 
+/* ─── DETAIL & SKILLS PAGES ───────────────────────────────── */
+.detail-page {
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.detail-back {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.detail-back:hover { color: var(--pastel-lavender); }
+
+.detail-header {
+  margin-bottom: 2.5rem;
+}
+
+.detail-category {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--pastel-mint);
+  margin-bottom: 0.5rem;
+}
+
+.detail-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.detail-summary {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.detail-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.detail-card {
+  padding: 2rem;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+.detail-card--full {
+  grid-column: 1 / -1;
+}
+
+.detail-section-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pastel-lavender);
+  margin-bottom: 1rem;
+}
+
+.detail-body {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.detail-list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.detail-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--pastel-mint);
+}
+
+.detail-screenshot {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  opacity: 0.92;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.nav-active {
+  color: var(--pastel-lavender) !important;
+}
+
 /* ─── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   .about-wrapper {

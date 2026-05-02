@@ -1,0 +1,102 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="{% url 'index' %}" class="nav-logo">DS.</a>
+  <ul class="nav-links">
+    <li><a href="{% url 'index' %}#projects">Work</a></li>
+    <li><a href="{% url 'index' %}#about">About</a></li>
+    <li><a href="{% url 'skills' %}">Skills</a></li>
+    <li><a href="{% url 'index' %}#resume">Resume</a></li>
+    <li><a href="{% url 'index' %}#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="detail-page">
+  <div class="section">
+
+    <a href="{% url 'index' %}#projects" class="detail-back">← Back to Projects</a>
+
+    <!-- Header -->
+    <div class="detail-header">
+      <p class="detail-category">{{ project.category }}</p>
+      <h1 class="detail-title glow-lavender">{{ project.title }}</h1>
+      <p class="detail-summary">{{ project.summary }}</p>
+      <div class="detail-links">
+        {% if project.link %}
+        <a href="{{ project.link }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">{{ project.link_label }} →</a>
+        {% endif %}
+        {% if project.github_link %}
+        <a href="{{ project.github_link }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="glass detail-card">
+      <h2 class="detail-section-title">Tools Used</h2>
+      <div class="hobby-tags">
+        {% for tool in tools %}
+        <span class="tag">{{ tool }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Main content grid -->
+    <div class="detail-grid">
+
+      <div class="glass detail-card">
+        <h2 class="detail-section-title">Business Problem</h2>
+        <p class="detail-body">{{ project.description }}</p>
+      </div>
+
+      <div class="glass detail-card">
+        <h2 class="detail-section-title">Key Features</h2>
+        <ul class="detail-list">
+          {% for feature in features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="glass detail-card">
+        <h2 class="detail-section-title">My Role & Contribution</h2>
+        <p class="detail-body">{{ project.role }}</p>
+      </div>
+
+      <div class="glass detail-card">
+        <h2 class="detail-section-title">Biggest Challenge</h2>
+        <p class="detail-body">{{ project.challenges }}</p>
+      </div>
+
+      <div class="glass detail-card detail-card--full">
+        <h2 class="detail-section-title">What I Learned</h2>
+        <p class="detail-body">{{ project.lessons_learned }}</p>
+      </div>
+
+    </div>
+
+    <!-- Screenshot -->
+    {% if project.image_path %}
+    <div class="glass detail-card detail-card--full">
+      <h2 class="detail-section-title">Screenshot / Visual</h2>
+      <img src="{% static project.image_path %}" alt="{{ project.title }} screenshot" class="detail-screenshot">
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<footer class="footer">
+  <span class="footer-text">© 2025 DIANNE SCHMIDT</span>
+  <div class="footer-links">
+    <a href="https://linkedin.com/in/dianneschmidt2393" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:dianne_schmidt@baylor.edu">Email</a>
+    <a href="{% url 'index' %}#contact">Contact</a>
+  </div>
+</footer>
+
+{% endblock %}

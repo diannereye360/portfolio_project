@@ -1,0 +1,54 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="{% url 'index' %}" class="nav-logo">DS.</a>
+  <ul class="nav-links">
+    <li><a href="{% url 'index' %}#projects">Work</a></li>
+    <li><a href="{% url 'index' %}#about">About</a></li>
+    <li><a href="{% url 'skills' %}" class="nav-active">Skills</a></li>
+    <li><a href="{% url 'index' %}#resume">Resume</a></li>
+    <li><a href="{% url 'index' %}#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="detail-page">
+  <div class="section">
+
+    <a href="{% url 'index' %}" class="detail-back">← Back to Home</a>
+
+    <div class="detail-header">
+      <p class="detail-category">Capabilities</p>
+      <h1 class="detail-title glow-lavender">Skills.</h1>
+      <p class="detail-summary">Tools, technologies, and frameworks I've worked with across AI, programming, data, and business.</p>
+    </div>
+
+    <div class="skills-grid">
+      {% for category, skill_list in categories.items %}
+      <div class="glass detail-card">
+        <h2 class="detail-section-title">{{ category }}</h2>
+        <div class="hobby-tags">
+          {% for skill in skill_list %}
+          <span class="tag">{{ skill.name }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <span class="footer-text">© 2025 DIANNE SCHMIDT</span>
+  <div class="footer-links">
+    <a href="https://linkedin.com/in/dianneschmidt2393" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:dianne_schmidt@baylor.edu">Email</a>
+    <a href="{% url 'index' %}#contact">Contact</a>
+  </div>
+</footer>
+
+{% endblock %}

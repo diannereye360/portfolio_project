@@ -4,9 +4,18 @@
     "pk": 1,
     "fields": {
       "title": "Personalized Chatbot",
+      "summary": "An AI assistant trained on my personal background to answer questions about who I am, my projects, and my career story.",
       "description": "Want to learn more about me? This AI assistant is trained to answer questions about who I am, my background, and my work — a direct, conversational line into my story.",
+      "category": "AI / Chatbot",
+      "tools_used": "Chatbase\nDjango\nHTML & CSS\nJavaScript",
+      "key_features": "Trained on personal bio and project data\nEmbedded directly in the portfolio page\nResponds conversationally to natural language questions\nNo-code configuration via Chatbase dashboard",
+      "role": "Designed the chatbot's knowledge base, curated the training data from my personal background and projects, configured the Chatbase model, and integrated the widget directly into the Django portfolio template.",
+      "challenges": "Getting the chatbot to respond accurately and consistently about specific personal details without hallucinating or giving overly generic answers required careful curation of the training content.",
+      "lessons_learned": "How to configure and deploy a no-code AI chatbot, the importance of structured and specific training data for response quality, and how to embed third-party JavaScript widgets cleanly into Django templates.",
+      "image_path": "",
       "link": null,
-      "link_label": "Coming Soon",
+      "link_label": "Try the Chat",
+      "github_link": null,
       "order": 1,
       "is_active": true
     }
@@ -16,9 +25,18 @@
     "pk": 2,
     "fields": {
       "title": "Multi-Agent Handyman",
+      "summary": "A multi-agent n8n workflow that automates job intake, pricing, scheduling, and client communication for a fictional handyman service business.",
       "description": "This project focuses on streamlining data collection and processing by connecting standard office tools with autonomous AI agents. By leveraging n8n as the orchestrator, the system transforms unstructured natural language inputs into structured, actionable data.",
+      "category": "AI Workflow / Automation",
+      "tools_used": "n8n\nGoogle Forms\nGoogle Sheets\nOpenAI (LLM)\nGmail API\nJavaScript (OOP)",
+      "key_features": "Google Form triggers the entire pipeline automatically\n4 specialized AI agents: Intake, Pricing, Scheduling, and Communications\nConditional IF routing based on urgency and estimate thresholds\nAutomated professional email generation and delivery via Gmail\nReal-time data storage in Google Sheets Big Board dashboard",
+      "role": "Designed the full multi-agent workflow architecture in n8n, wrote prompt engineering instructions for all four AI agents, built JavaScript data transformation nodes using OOP principles, and configured the conditional routing logic.",
+      "challenges": "Ensuring each AI agent returned consistent, parseable JSON output — and configuring the IF node to correctly route jobs based on urgency flags and dollar thresholds — required extensive prompt tuning and testing.",
+      "lessons_learned": "Multi-agent orchestration patterns, prompt engineering for structured data outputs, how to apply OOP principles inside n8n JavaScript nodes, and how small workflow design decisions compound into large efficiency gains.",
+      "image_path": "main/files/handyman-email.png",
       "link": "https://docs.google.com/forms/d/e/1FAIpQLSf_QlxWxhpcvmpt4CW4R7kRq5c0TEGPs8HX9C7p_g2Byrt5LQ/viewform?usp=dialog",
       "link_label": "View the Form",
+      "github_link": null,
       "order": 2,
       "is_active": true
     }
@@ -28,9 +46,18 @@
     "pk": 3,
     "fields": {
       "title": "Video Generation",
+      "summary": "A 10-second AI-generated video reimagining Gollum finding freedom from the One Ring, created with Google Labs Flow.",
       "description": "A 10-second AI-generated video reimagining the moment Gollum didn't need the ring — built with Google Labs Flow. Part creative experiment, part exploration of generative storytelling.",
+      "category": "Google AI Studio / Generative Media",
+      "tools_used": "Google Labs Flow\nGoogle AI Studio\nGenerative Video AI\nCreative Prompt Engineering",
+      "key_features": "Text-to-video generation from a natural language creative brief\nNarrative storytelling through generative AI\nIterative prompt refinement to achieve scene coherence\n10-second publishable output",
+      "role": "Wrote the creative brief and prompt, iterated through multiple AI-generated versions to achieve the desired narrative scene, and published the final output for sharing.",
+      "challenges": "Getting the generative model to maintain character consistency and scene coherence across a 10-second clip — the AI frequently drifted from the intended look or setting between frames.",
+      "lessons_learned": "How generative video models interpret creative prompts, the current capabilities and limitations of AI video at this stage, and how iterative prompt refinement is just as important in creative AI as in language AI.",
+      "image_path": "",
       "link": "https://labs.google/fx/tools/flow/shared/video/d60da038-6a99-41a9-b19d-304ea9e977ae",
       "link_label": "Watch the Video",
+      "github_link": null,
       "order": 3,
       "is_active": true
     }
@@ -40,10 +67,61 @@
     "pk": 4,
     "fields": {
       "title": "Campus Skill Swap",
-      "description": "Campus Skill Swap is a community-driven web application designed to decentralize learning. While universities provide the theory, students often possess the practical \"micro-skills\"—from mastering a specific software to piecing together a complex quilt—that aren't found in a syllabus. This platform facilitates a direct knowledge exchange, allowing students to trade skills in a \"vibe-coded,\" user-centric environment.",
+      "summary": "A community-driven Django web app where students trade practical micro-skills that universities don't teach.",
+      "description": "Campus Skill Swap is a community-driven web application designed to decentralize learning. While universities provide the theory, students often possess the practical micro-skills — from mastering a specific software to piecing together a complex quilt — that aren't found in a syllabus. This platform facilitates direct peer knowledge exchange.",
+      "category": "Full-Stack Django Application",
+      "tools_used": "Django\nPython\nSQLite\nHTML & CSS\nRender (Deployment)",
+      "key_features": "Skill listing and discovery by category\nCommunity-driven peer exchange model\nFull Django CRUD implementation\nLive deployment on Render",
+      "role": "Designed and built the full-stack application from scratch — including the data models, views, URL routing, and templates — then deployed it live on Render.",
+      "challenges": "Designing a clean data model that captures skill offerings, exchange requests, and the relationship between users required several iterations before settling on a structure that was both flexible and queryable.",
+      "lessons_learned": "End-to-end Django development workflow, the full deployment lifecycle on Render, how to design database schemas for social exchange features, and how vibe-coding a user-first interface changes design decisions.",
+      "image_path": "",
       "link": "https://campus-skill-swap.onrender.com/",
       "link_label": "View Live",
+      "github_link": null,
       "order": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 5,
+    "fields": {
+      "title": "LangChain Chatbot Agent",
+      "summary": "A terminal-based chatbot agent built with LangChain and Gemini AI that explains machine learning concepts conversationally.",
+      "description": "This project investigates how to develop AI chatbot applications using the LangChain framework. The agent runs in the terminal and uses Google Gemini AI as the underlying language model to answer questions about machine learning concepts in a natural, conversational way.",
+      "category": "LangChain / AI Agent",
+      "tools_used": "LangChain\nPython\nGoogle Gemini AI\nTerminal / CLI",
+      "key_features": "Terminal-based conversational interface\nGoogle Gemini AI as the LLM backbone\nExplains machine learning concepts on demand\nAgent-based architecture using LangChain chains",
+      "role": "Designed and built the chatbot agent from scratch using LangChain, configured the Google Gemini AI integration, and developed the conversation flow for explaining machine learning topics.",
+      "challenges": "Learning how LangChain structures prompts, chains, and agent behaviors required understanding a new framework abstraction layer — figuring out how to connect Gemini AI as the LLM backend while keeping the agent logic clean was the steepest part of the learning curve.",
+      "lessons_learned": "How to build a terminal-based AI agent using LangChain, how to integrate Google Gemini as a language model backend, and how LangChain's agent and chain abstractions differ from writing direct prompt-response calls to an API.",
+      "image_path": "",
+      "link": null,
+      "link_label": "View Project",
+      "github_link": "https://github.com/diannereye360/LangchainProject1.git",
+      "order": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 6,
+    "fields": {
+      "title": "Machine Learning Explorations",
+      "summary": "A four-model scikit-learn project covering digit classification, housing price regression, MPG prediction, and iris flower classification.",
+      "description": "A collection of machine learning experiments using scikit-learn's built-in datasets, exploring four distinct problem types: digit recognition with heatmap visualization, California housing median value regression, auto-MPG fuel efficiency prediction, and multi-class iris flower classification using K-Nearest Neighbors.",
+      "category": "Machine Learning / scikit-learn",
+      "tools_used": "Python\nscikit-learn\npandas\nseaborn\nmatplotlib",
+      "key_features": "Digit classifier (load_digits) with confusion matrix heatmap using seaborn\nCalifornia housing median value predictor using linear regression — identified median income as strongest positive correlation\nAuto-MPG fuel efficiency predictor using linear regression\nIris flower multi-class classifier using K-Nearest Neighbors with confusion matrix output",
+      "role": "Built four separate ML models across classification and regression problem types, performed exploratory data analysis on each dataset, selected appropriate algorithms, trained and evaluated each model, and visualized results using matplotlib and seaborn.",
+      "challenges": "Working across four different problem types — binary classification, multi-class classification, and regression — required understanding when to apply each algorithm and how evaluation metrics differ. Interpreting the California housing dataset's feature correlations to identify median income as the key predictor was particularly challenging.",
+      "lessons_learned": "The fundamental differences between classification and regression problems, how to evaluate models using confusion matrices versus correlation analysis, how feature selection and exploratory data analysis directly influence model performance, and how to communicate ML results visually through heatmaps and plots.",
+      "image_path": "",
+      "link": null,
+      "link_label": "View Project",
+      "github_link": "https://github.com/diannereye360/ml.git",
+      "order": 6,
       "is_active": true
     }
   }

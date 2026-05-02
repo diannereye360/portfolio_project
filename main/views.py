@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .models import Project, ContactMessage
+from .models import Project, ContactMessage, Skill
 from .forms import ContactForm
 
 
@@ -22,3 +22,22 @@ def index(request):
         form = ContactForm()
 
     return render(request, 'main/index.html', {'projects': projects, 'form': form})
+
+
+def project_detail(request, pk):
+    project = get_object_or_404(Project, pk=pk, is_active=True)
+    tools = [t.strip() for t in project.tools_used.splitlines() if t.strip()]
+    features = [f.strip() for f in project.key_features.splitlines() if f.strip()]
+    return render(request, 'main/project_detail.html', {
+        'project': project,
+        'tools': tools,
+        'features': features,
+    })
+
+
+def skills(request):
+    all_skills = Skill.objects.all()
+    categories = {}
+    for skill in all_skills:
+        categories.setdefault(skill.category, []).append(skill)
+    return render(request, 'main/skills.html', {'categories': categories})
