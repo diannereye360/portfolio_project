@@ -165,10 +165,12 @@
         {% if forloop.counter == 2 %}
         <img src="{% static 'main/files/handyman-email.png' %}"
              alt="AI-generated confirmation email sample output"
-             class="project-sample-img">
+             class="project-sample-img"
+             onclick="openImgLightbox(this.src, this.alt)">
         <img src="{% static 'main/files/handyman-sheet.png' %}"
              alt="Joe's Handyman Google Sheet with form responses"
-             class="project-sample-img">
+             class="project-sample-img"
+             onclick="openImgLightbox(this.src, this.alt)">
         {% endif %}
       </div>
       {% endfor %}
@@ -463,6 +465,22 @@
       alt="AI-generated confirmation email for ceiling fan installation" class="lightbox-img">
   </div>
 </div>
+
+<!-- ─── IMAGE LIGHTBOX ──────────────────────────────────────── -->
+<div id="img-lightbox" class="modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="lightbox-card glass">
+    <button class="modal-close" onclick="document.getElementById('img-lightbox').classList.remove('open')" aria-label="Close">✕</button>
+    <img id="img-lightbox-img" src="" alt="" class="lightbox-img">
+  </div>
+</div>
+
+<script>
+function openImgLightbox(src, alt) {
+  document.getElementById('img-lightbox-img').src = src;
+  document.getElementById('img-lightbox-img').alt = alt;
+  document.getElementById('img-lightbox').classList.add('open');
+}
+</script>
 
 <!-- ─── FOOTER ────────────────────────────────────────────── -->
 <footer class="footer">

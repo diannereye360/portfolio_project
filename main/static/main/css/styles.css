@@ -782,6 +782,13 @@ body::after {
   border-radius: 8px;
   margin-top: 1.25rem;
   opacity: 0.9;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.project-sample-img:hover {
+  opacity: 1;
+  transform: scale(1.01);
 }
 
 .modal-trigger {
