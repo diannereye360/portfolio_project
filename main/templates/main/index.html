@@ -137,13 +137,23 @@
         <p class="project-number">0{{ forloop.counter }}</p>
         <h3 class="project-title">{{ project.title }}</h3>
         <p class="project-desc">{{ project.description }}</p>
+        {% if forloop.counter == 1 %}
+        <div class="chatbot-embed">
+          <iframe
+            src="https://www.chatbase.co/chatbot-iframe/ZZQn-Uak_lE5qLZsiyHQk"
+            width="100%"
+            style="height: 500px; border: none; border-radius: 8px;"
+            title="Personalized Chatbot">
+          </iframe>
+        </div>
+        {% endif %}
         <div class="project-actions">
           {% if project.link %}
           <a href="{{ project.link }}" class="project-link" target="_blank" rel="noopener noreferrer">
             {{ project.link_label }} →
           </a>
           {% else %}
-          <span class="project-link coming-soon">Coming Soon</span>
+          <span class="project-link coming-soon">Try it above ↑</span>
           {% endif %}
           {% if forloop.counter == 2 %}
           <button class="project-link modal-trigger"
