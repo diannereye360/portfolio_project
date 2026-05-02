@@ -160,15 +160,14 @@
             onclick="document.getElementById('workflow-modal').classList.add('open')">
             How it Works →
           </button>
-          <button class="project-link modal-trigger"
-            onclick="document.getElementById('email-lightbox').classList.add('open')">
-            Sample Output →
-          </button>
           {% endif %}
         </div>
         {% if forloop.counter == 2 %}
         <img src="{% static 'main/files/handyman-email.png' %}"
              alt="AI-generated confirmation email sample output"
+             class="project-sample-img">
+        <img src="{% static 'main/files/handyman-sheet.png' %}"
+             alt="Joe's Handyman Google Sheet with form responses"
              class="project-sample-img">
         {% endif %}
       </div>
