@@ -1,0 +1,50 @@
+[
+  {
+    "model": "main.project",
+    "pk": 1,
+    "fields": {
+      "title": "Personalized Chatbot",
+      "description": "Want to learn more about me? This AI assistant is trained to answer questions about who I am, my background, and my work — a direct, conversational line into my story.",
+      "link": null,
+      "link_label": "Coming Soon",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 2,
+    "fields": {
+      "title": "Multi-Agent Handyman",
+      "description": "This project focuses on streamlining data collection and processing by connecting standard office tools with autonomous AI agents. By leveraging n8n as the orchestrator, the system transforms unstructured natural language inputs into structured, actionable data.",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSf_QlxWxhpcvmpt4CW4R7kRq5c0TEGPs8HX9C7p_g2Byrt5LQ/viewform?usp=dialog",
+      "link_label": "View the Form",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 3,
+    "fields": {
+      "title": "Video Generation",
+      "description": "A 10-second AI-generated video reimagining the moment Gollum didn't need the ring — built with Google Labs Flow. Part creative experiment, part exploration of generative storytelling.",
+      "link": "https://labs.google/fx/tools/flow/shared/video/d60da038-6a99-41a9-b19d-304ea9e977ae",
+      "link_label": "Watch the Video",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 4,
+    "fields": {
+      "title": "Campus Skill Swap",
+      "description": "Campus Skill Swap is a community-driven web application designed to decentralize learning. While universities provide the theory, students often possess the practical \"micro-skills\"—from mastering a specific software to piecing together a complex quilt—that aren't found in a syllabus. This platform facilitates a direct knowledge exchange, allowing students to trade skills in a \"vibe-coded,\" user-centric environment.",
+      "link": "https://campus-skill-swap.onrender.com/",
+      "link_label": "View Live",
+      "order": 4,
+      "is_active": true
+    }
+  }
+]
