@@ -166,6 +166,11 @@
           </button>
           {% endif %}
         </div>
+        {% if forloop.counter == 2 %}
+        <img src="{% static 'main/files/handyman-email.png' %}"
+             alt="AI-generated confirmation email sample output"
+             class="project-sample-img">
+        {% endif %}
       </div>
       {% endfor %}
     </div>

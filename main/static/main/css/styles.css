@@ -777,6 +777,13 @@ body::after {
   flex-wrap: wrap;
 }
 
+.project-sample-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1.25rem;
+  opacity: 0.9;
+}
+
 .modal-trigger {
   background: none;
   border: none;
