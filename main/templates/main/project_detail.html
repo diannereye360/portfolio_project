@@ -79,13 +79,53 @@
 
     </div>
 
-    <!-- Screenshot -->
+    <!-- Screenshot(s) -->
     {% if project.image_path %}
     <div class="glass detail-card detail-card--full">
       <h2 class="detail-section-title">Screenshot / Visual</h2>
-      <img src="{% static project.image_path %}" alt="{{ project.title }} screenshot" class="detail-screenshot">
+      {% if project.pk == 6 %}
+      <div class="ml-gallery">
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/ml-screenshot1.png' %}" alt="Classification of Numbers (a.)" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Classification of Numbers (a.)</figcaption>
+        </figure>
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/ml-screenshot2.png' %}" alt="Classification of Numbers (b.)" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Classification of Numbers (b.)</figcaption>
+        </figure>
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/ml-screenshot3.png' %}" alt="House Value Predictions" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">House Value Predictions</figcaption>
+        </figure>
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/ml-screenshot4.png' %}" alt="Auto Weight vs. MPG Predictions" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Auto Weight vs. MPG Predictions</figcaption>
+        </figure>
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/ml-screenshot5.png' %}" alt="Classification of Iris" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Classification of Iris</figcaption>
+        </figure>
+      </div>
+      {% else %}
+      <img src="{% static project.image_path %}" alt="{{ project.title }} screenshot" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+      {% endif %}
     </div>
     {% endif %}
+
+    <!-- Image lightbox -->
+    <div id="img-lightbox" class="modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+      <div class="lightbox-card glass">
+        <button class="modal-close" onclick="document.getElementById('img-lightbox').classList.remove('open')" aria-label="Close">✕</button>
+        <img id="img-lightbox-img" src="" alt="" class="lightbox-img">
+      </div>
+    </div>
+    <script>
+    function openImgLightbox(src, alt) {
+      document.getElementById('img-lightbox-img').src = src;
+      document.getElementById('img-lightbox-img').alt = alt;
+      document.getElementById('img-lightbox').classList.add('open');
+    }
+    </script>
 
   </div>
 </div>
