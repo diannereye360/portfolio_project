@@ -75,7 +75,7 @@
       "role": "Designed and built the full-stack application from scratch — including the data models, views, URL routing, and templates — then deployed it live on Render.",
       "challenges": "Designing a clean data model that captures skill offerings, exchange requests, and the relationship between users required several iterations before settling on a structure that was both flexible and queryable.",
       "lessons_learned": "End-to-end Django development workflow, the full deployment lifecycle on Render, how to design database schemas for social exchange features, and how vibe-coding a user-first interface changes design decisions.",
-      "image_path": "",
+      "image_path": "main/files/skillswap-home.png",
       "link": "https://campus-skill-swap.onrender.com/",
       "link_label": "View Live",
       "github_link": null,

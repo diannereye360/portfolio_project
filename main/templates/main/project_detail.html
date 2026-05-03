@@ -83,7 +83,26 @@
     {% if project.image_path %}
     <div class="glass detail-card detail-card--full">
       <h2 class="detail-section-title">Screenshot / Visual</h2>
-      {% if project.pk == 6 %}
+      {% if project.pk == 4 %}
+      <div class="ml-gallery">
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/skillswap-home.png' %}" alt="Home Page" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Home Page</figcaption>
+        </figure>
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/skillswap-listing.png' %}" alt="Skill Listing" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Skill Listing</figcaption>
+        </figure>
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/skillswap-profile.png' %}" alt="Profile" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Profile</figcaption>
+        </figure>
+        <figure class="ml-figure">
+          <img src="{% static 'main/files/skillswap-skill.png' %}" alt="Skill" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
+          <figcaption class="ml-caption">Skill</figcaption>
+        </figure>
+      </div>
+      {% elif project.pk == 6 %}
       <div class="ml-gallery">
         <figure class="ml-figure">
           <img src="{% static 'main/files/ml-screenshot1.png' %}" alt="Classification of Numbers (a.)" class="detail-screenshot project-sample-img" onclick="openImgLightbox(this.src, this.alt)">
