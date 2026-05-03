@@ -41,3 +41,7 @@ def skills(request):
     for skill in all_skills:
         categories.setdefault(skill.category, []).append(skill)
     return render(request, 'main/skills.html', {'categories': categories})
+
+
+def resume(request):
+    return render(request, 'main/resume.html')

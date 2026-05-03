@@ -1354,6 +1354,19 @@ body::after {
   color: var(--pastel-lavender) !important;
 }
 
+/* ─── RESUME PAGE ─────────────────────────────────────────── */
+.resume-embed-card {
+  padding: 1rem;
+}
+
+.resume-embed {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  border-radius: 6px;
+  border: none;
+}
+
 /* ─── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   .about-wrapper {
